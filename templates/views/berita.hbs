@@ -1,0 +1,23 @@
+{{> header}}
+
+    <div class="container mt-5">
+      <div class="row">
+        {{#each berita}}
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="card mb-4">
+              <img src="{{thumbnail}}" class="card-img-top" alt="{{title}}" />
+              <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">{{description}}</p>
+                <a href="{{link}}" class="btn btn-primary" target="_blank">Baca
+                  Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    {{> footer}}
+  </body>
+
+</html>

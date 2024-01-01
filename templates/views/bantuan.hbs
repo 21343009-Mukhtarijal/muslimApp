@@ -1,0 +1,87 @@
+
+{{> header}}
+
+    <section class="py-3 py-md-5 py-xl-8">
+      <div class="container-fluid">
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center text-center">
+          <div class="col-12">
+            <h1 class="display-4 mb-4">Selamat datang di laman bantuan</h1>
+          </div>
+        </div>
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+          <div class="col-12 col-lg-6 col-xl-5">
+            <h2 class="h3 mb-3">Fitur Aplikasi</h2>
+            <ol class="list lead">
+              <li>Al-Qur'an Online: Baca dan dengarkan ayat-ayat suci Al-Qur'an.
+                Temukan terjemahan, dan informasi terkait setiap surah. Data
+                Al-Qur'an ini diambil dari API yang disedikan oleh :
+                <a
+                  href="https://equran.id/apidev"
+                  target="_blank"
+                >EQuran.id</a></li>
+              <li>Doa-doa Harian: Temukan koleksi doa-doa harian untuk berbagai
+                kesempatan. Sertakan doa-doa tersebut dalam kehidupan
+                sehari-hari Anda. Data do'a ini diambil dari API pada link
+                berikut :
+                <a
+                  href="https://doa-doa-api-ahmadramadhan.fly.dev/api"
+                  target="_blank"
+                >Do'a by ahmadramadhan</a></li>
+              <li>Berita Islami: Dapatkan informasi terkini tentang perkembangan
+                dunia Islam dan berita-berita terkait kemanusiaan. Data berita
+                Islami ini diperoleh dari API pada link berikut :
+                <a
+                  href="https://api-berita-indonesia.vercel.app/republika/islam/"
+                  target="_blank"
+                >Berita Islami</a></li>
+            </ol>
+          </div>
+
+          <div class="col-12 col-lg-6 col-xl-7">
+            <h2 class="h3 mb-3">Butuh Bantuan?</h2>
+            <p class="lead">Jika Anda mengalami kendala, memiliki pertanyaan,
+              atau ingin melaporkan masalah, silakan gunakan formulir di bawah
+              ini. Kami akan segera merespons Anda.</p>
+
+            <!-- Formulir Laporan Mailer -->
+            <form action="/lapor" method="post">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama Anda:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  name="nama"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Anda:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan Anda:</label>
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  name="pesan"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim Laporan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{> footer}}
+  </body>
+
+</html>

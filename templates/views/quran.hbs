@@ -1,0 +1,26 @@
+
+{{> header}}
+
+  <!-- Daftar Surah -->
+  <div class="container mt-5">
+    <div class="row card-surat-list">
+      {{#each surahList}}
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div
+            class="card mb-4 card-surat"
+            onclick="location.href='/quran/{{this.nomor}}'"
+          >
+            <div class="card-body">
+              <h5 class="card-title">{{this.nomor}}. {{this.namaLatin}}</h5>
+              <h3 class="card-subtitle mb-2 text-muted text-end">{{this.nama}}</h3>
+              <p class="card-text text-end">{{this.arti}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{> footer}}
+</body>
+
+</html>

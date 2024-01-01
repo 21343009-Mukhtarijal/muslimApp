@@ -1,0 +1,26 @@
+
+{{> header}}
+
+  <!-- Konten Do'a -->
+  <div class="container mt-5">
+    <div class="row">
+      {{#each doaList}}
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card mb-4">
+          <div class="card-body">
+            <!-- Judul Do'a -->
+            <h4 class="card-title text-end" style="font-weight: bold;">{{doa}}</h3>
+            <!-- Ayat Do'a -->
+            <p class="card-text text-end" style="font-size: 1.6em;">{{ayat}}</p>
+            <!-- Arti Do'a -->
+            <p class="card-text">{{artinya}}</p>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{> footer}}
+</body>
+
+</html>

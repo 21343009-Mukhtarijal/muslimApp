@@ -1,0 +1,49 @@
+
+{{> header}}
+
+  <div class="container mt-5">
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-12">
+          <!-- Konten Detail Surah -->
+          <main>
+            <h2>{{surahDetail.nama}}. {{surahDetail.nomor}} - {{surahDetail.namaLatin}}</h2>
+            <p>{{surahDetail.deskripsi}}</p>
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                {{#each surahDetail.ayat}}
+                <li class="list-group-item mb-3">
+                  <p class="card-text text-end"><strong>Ayat {{this.nomorAyat}}</strong></p>
+                  <p class="card-text text-end" style="font-size: 1.8em;">{{this.teksArab}}</p>
+                  <p style="font-style: italic;">{{this.teksLatin}}</p>
+                  <p>{{this.teksIndonesia}}</p>
+                  <audio controls>
+                    <source src="{{this.audio.[01]}}" type="audio/mpeg">
+                    Browser Anda tidak mendukung tag audio.
+                  </audio>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+          </main>
+          <!-- End Konten Detail Surah -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Script untuk pemutaran otomatis ayat berikutnya
+    const audioAyat = document.querySelectorAll('audio[controls]');
+    audioAyat.forEach((audio, index) => {
+      audio.addEventListener('ended', () => {
+        if (index < audioAyat.length - 1) {
+          audioAyat[index + 1].play();
+        }
+      });
+    });
+  </script>
+  {{> footer}}
+</body>
+
+</html>
